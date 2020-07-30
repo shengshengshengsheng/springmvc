@@ -12,7 +12,7 @@
 </head>
 <body>
 <%--请求参数的绑定--%>
-    <form action="param/saveAccount" method="post">
+    <%--<form action="param/saveAccount" method="post">
         姓名: <input type="text" name="username"/> <br/>
         密码: <input type="text" name="password"/> <br/>
         金额: <input type="text" name="money"/> <br/>
@@ -33,7 +33,14 @@
         用户名: <input type="text" name="userMap['three'].uname"/> <br/>
         年龄: <input type="text" name="userMap['three'].age"/> <br/>
         <input value="提交" type="submit"/>
-    </form>
-</a>
+    </form>--%>
+<br/>
+<br/>
+<form action="param/saveUser" method="post">
+    用户名：<input type="text" name ="uname">
+    年龄：<input type="text" name = "age">
+    生日:<input type="text" name="birthday">
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>

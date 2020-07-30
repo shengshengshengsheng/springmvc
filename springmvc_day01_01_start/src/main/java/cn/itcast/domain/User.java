@@ -1,6 +1,7 @@
 package cn.itcast.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author:Administrator
@@ -11,6 +12,16 @@ public class User implements Serializable {
     private String uname;
 
     private Integer age;
+
+    private Date birthday;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public String getUname() {
         return uname;
@@ -33,6 +44,7 @@ public class User implements Serializable {
         return "User{" +
                 "uname='" + uname + '\'' +
                 ", age=" + age +
+                ", birthday=" + birthday +
                 '}';
     }
 }
