@@ -11,6 +11,7 @@
     <modules>
         <module>springmvc_day01_01_start</module>
         <module>springmvc_day02_01_response</module>
+        <module>springmvc_day02_02_fileupload</module>
     </modules>
     <properties>
         <spring.version>5.0.2.RELEASE</spring.version>
@@ -45,6 +46,26 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-core</artifactId>
+            <version>1.19.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19.1</version>
         </dependency>
     </dependencies>
 
