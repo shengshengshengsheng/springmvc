@@ -1,8 +1,9 @@
 package cn.itcast.controller;
 
 import cn.itcast.domain.User;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
 import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.springframework.stereotype.Controller;
@@ -140,6 +141,38 @@ public class UserController {
         name = replace + "_" + name;
         //完成文件上传
         upload.transferTo(new File(realPath, name));
+        System.out.println("文件上传");
+        return "success";
+    }
+
+    /**
+     * 跨服务器上传
+     * @param upload
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/fileUpload3")
+    public String fileUpload3(MultipartFile upload) throws Exception {
+        System.out.println("fileUpload3执行了");
+        //定义上传的文件服务器的路径
+        String path = "http://localhost:9090/uploads/";
+
+
+        //说明上传文件项
+        //获取上传文件的名称
+        String name = upload.getOriginalFilename();
+
+        String replace = UUID.randomUUID().toString().replace(".", "");
+        name = replace + "_" + name;
+        //完成文件上传 跨服务器上传
+
+        //创建客户端的对象
+        Client client = Client.create();
+        //和图片服务器进行连接
+        WebResource resource = client.resource(path + name);
+        //上传文件
+        resource.put(upload.getBytes());
+
         System.out.println("文件上传");
         return "success";
     }

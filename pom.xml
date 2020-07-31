@@ -12,6 +12,7 @@
         <module>springmvc_day01_01_start</module>
         <module>springmvc_day02_01_response</module>
         <module>springmvc_day02_02_fileupload</module>
+        <module>springmvc_day02_03_fileuploadserver</module>
     </modules>
     <properties>
         <spring.version>5.0.2.RELEASE</spring.version>
