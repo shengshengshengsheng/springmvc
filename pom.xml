@@ -16,7 +16,7 @@
         <module>springmvc_day03_ssm</module>
     </modules>
     <properties>
-        <spring.version>5.0.2.RELEASE</spring.version>
+        <spring.version>5.2.8.RELEASE</spring.version>
     </properties>
     <dependencies>
         <dependency>
